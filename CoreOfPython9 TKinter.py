@@ -45,10 +45,23 @@ from tkinter import *
 # mainloop()
 
 ########### Buttons Calls ###############
+# from tkinter import *
+# def Pressed():
+#     print("Hello, Press me again")
+# root =Tk()
+# button = Button(root, text="Press Me", command = Pressed)
+# button.pack(pady=40, padx=40)
+# root.mainloop()
+
+########### Input box & Button ###############
 from tkinter import *
-def Pressed():
-    print("Hello, Press me again")
-root =Tk()
-button = Button(root, text="Press Me", command = Pressed)
-button.pack(pady=40, padx=40)
+root = Tk(className="My first GUI")
+value = StringVar()
+w = Entry(root, textvariable=value)
+w.pack()
+def press():
+    print("you entered")
+    print("%s" % value.get())
+foo = Button(root, text="Press Me", command = press)
+foo.pack()
 root.mainloop()
